@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style media="screen">
+    input{text-align: right;}
+  </style>
+</head>
+<body>
+  <div>
+  <input onkeyup="convert();" type="text" id="money-mdl" value="0.00">MDL
+</div>
+<div>
+<input type="text" id="money-usd" value="0.00">USD
+</div>
+<div>
+<input type="text" id="money-eur" value="0.00">EUR
+</div>
+<script type="text/javascript">
+const USD_MDL = 16.50;
+const EURO_MDL = 20.00;
+function convert(){
+  var input_mdl =
+  document.querySelector('#money-mdl');
+  var money_usd = input_mdl.value/USD_MDL;
+  var money_eur = input_mdl.value/EURO_MDL;
+  var input_usd =
+  document.querySelector('#money-usd');
+  var input_eur =
+  document.querySelector('#money-eur');
+  //
+  input_usd.value = money_usd;
+  input_eur.value = money_eur;
+
+
+}
+
+</script>
+</body>
+</html>
